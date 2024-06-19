@@ -1,0 +1,39 @@
+name: fbdbmobdemo
+description: "A demo Flutter application for the fbdb Firebird database access library."
+version: 1.0.0
+publish_to: 'none'
+repository: https://github.com/hipercompl/fbdbmobdemo
+homepage: https://github.com/hipercompl/fbdb
+issue_tracker: https://github.com/hipercompl/fbdb/issues
+platforms:
+  android:
+  ios:
+  linux:
+  macos:
+  windows:
+
+screenshots:
+  - description: An Android application connecting directly to a Firebird database.
+    path: fbdbmobdemo_scr.png
+
+topics:
+  - database
+  - firebird
+  - fbclient
+
+environment:
+  sdk: '>=3.4.1 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  fbdb: ^1.0.0
+
+dev_dependencies:
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - firebird.msg
