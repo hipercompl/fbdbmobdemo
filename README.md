@@ -33,7 +33,7 @@ flutter run -d <your device ID>
 ```
 
 ## Deployment
-The application already includes the native client libraries from the official Firebird 5.0 for Android distribution, so there's no need to install / copy them separately.
+The application already includes the native client libraries from the Firebird 5.0 for Android distribution (actually, from a 5.0.1 snapshot build due to [this Firebird issue](https://github.com/FirebirdSQL/firebird/issues/8110)), so there's no need to install / copy them separately.
 
 The libraries are placed in the `android/app/src/main/jniLibs` subdirectory of the project directory. There are shared libraries for all supported architectures:
 - arm64-v8a
