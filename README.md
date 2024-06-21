@@ -48,3 +48,7 @@ For more information about the *fbdb* project, please visit the [official fbdb r
 
 ## License
 The application is licensed under a BSD-3 license (see the [LICENSE](https://github.com/hipercompl/fbdb/blob/main/LICENSE) file).
+
+## Changelog
+- 1.0.1: upgraded Firebird client libraries for Android to version 5.0.1 (snapshot), due to Firebird 5.0 [issue 8110](https://github.com/FirebirdSQL/firebird/issues/8110). The shared libraries from the snapshot work fine on Android 14 (tested with a physical device).
+- 1.0.0: the first public release.

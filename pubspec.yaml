@@ -1,6 +1,6 @@
 name: fbdbmobdemo
 description: "A demo Flutter application for the fbdb Firebird database access library."
-version: 1.0.0
+version: 1.0.1
 publish_to: 'none'
 repository: https://github.com/hipercompl/fbdbmobdemo
 homepage: https://github.com/hipercompl/fbdb
