@@ -49,6 +49,9 @@ class _LoginFormState extends State<LoginForm> {
               mainAxisSize: MainAxisSize.min,
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
+                const SizedBox(
+                  height: 8,
+                ),
                 TextFormField(
                   decoration: const InputDecoration(
                     labelText: "Host name or IP",
@@ -64,6 +67,9 @@ class _LoginFormState extends State<LoginForm> {
                   onSaved: (value) {
                     setState(() => LoginParams.data.host = value ?? "");
                   },
+                ),
+                const SizedBox(
+                  height: 8,
                 ),
                 TextFormField(
                   decoration: const InputDecoration(
@@ -89,6 +95,9 @@ class _LoginFormState extends State<LoginForm> {
                         LoginParams.data.port = int.parse(value ?? "3050"));
                   },
                 ),
+                const SizedBox(
+                  height: 8,
+                ),
                 TextFormField(
                   decoration: const InputDecoration(
                     labelText: "Database path or alias",
@@ -106,6 +115,9 @@ class _LoginFormState extends State<LoginForm> {
                     setState(() => LoginParams.data.database = value ?? "");
                   },
                 ),
+                const SizedBox(
+                  height: 8,
+                ),
                 TextFormField(
                   decoration: const InputDecoration(
                     labelText: "User name",
@@ -115,6 +127,9 @@ class _LoginFormState extends State<LoginForm> {
                   onSaved: (value) {
                     setState(() => LoginParams.data.user = value ?? "");
                   },
+                ),
+                const SizedBox(
+                  height: 8,
                 ),
                 TextFormField(
                   decoration: const InputDecoration(
@@ -126,6 +141,9 @@ class _LoginFormState extends State<LoginForm> {
                   onSaved: (value) {
                     setState(() => LoginParams.data.password = value ?? "");
                   },
+                ),
+                const SizedBox(
+                  height: 8,
                 ),
                 FilledButton(
                   onPressed: () async {
