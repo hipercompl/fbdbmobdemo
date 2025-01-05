@@ -43,6 +43,17 @@ The libraries are placed in the `android/app/src/main/jniLibs` subdirectory of t
 
 To upgrade the libraries to a different version, download the official Android build of the Firebird server, extract the appropriate dynamic libraries from the downloaded archive, and place them in the directories mentioned above (making sure the directory names and the actual architectures of the dynamic libraries match).
 
+### Android permissions
+If you plan to deploy this demo application on a physical Android device in **release** mode, you need to remember to add the following permission declaration to `android/app/src/main/AndroidManifest.xml`:
+```xml
+<uses-permission android:name="android.permission.INTERNET"/>
+```
+
+Otherwise the application won't be able to connect to a Firebird server via the network and you'll get "unable to complete network request to..." error.
+The `AndroidManifest.xml` file in this repo already contains this addition, but should you restart the Flutter Android project from scratch, please remember to modify the manifest.
+
+> Issue initially reported by [arturmois](https://github.com/arturmois) (thanks Artur!).
+
 ## More information
 For more information about the *fbdb* project, please visit the [official fbdb repository](https://github.com/hipercompl/fbdb).
 
@@ -50,5 +61,6 @@ For more information about the *fbdb* project, please visit the [official fbdb r
 The application is licensed under a BSD-3 license (see the [LICENSE](https://github.com/hipercompl/fbdb/blob/main/LICENSE) file).
 
 ## Changelog
+- 1.0.2: upgraded Firebird client libraries for Android to official stable version 5.0.1 (the previous version used developmen snapshot versions of the libraries). Added INTERNET permission request to AndroidManifest.xml, otherwise the app can't connecti via network when built in release mode and deployed to an actual device.
 - 1.0.1: upgraded Firebird client libraries for Android to version 5.0.1 (snapshot), due to Firebird 5.0 [issue 8110](https://github.com/FirebirdSQL/firebird/issues/8110). The shared libraries from the snapshot work fine on Android 14 (tested with a physical device).
 - 1.0.0: the first public release.
